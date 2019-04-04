@@ -1,12 +1,16 @@
 # cloud-computing-project-2
 Team Members: David Kilgannon, Daniel Jankowski, Tyler Heller, Cameron Brown
+
 (Consult history to see dates changed)
+
 Project Option 3
-	To Do
+
+	To Do:
 		Install and deploy a multi-node computing service on CloudLab's OpenStack Cloud.
 			Select a computing service consisting of at least two service nodes (i.e., a web server
 			with a backend SQL server OR a Big Data Analytics Hadoop cluster with namenode and datanodes)
-			and deploy the corresponding VMs inside CloudLab's OpenStack infrastructure
+			and deploy the corresponding VMs inside CloudLab's OpenStack infrastructure.
+			
 			
 		Subtasks
 			Able to setup VM nodes (possibly on local computers) that work together to provide a unified
