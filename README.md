@@ -20,7 +20,27 @@ Project Option 3
 			Documentation describing the selected computing service, including network diagram and specific
 			details on what services being installed on which VM.
 			
-			We will be making an Apache web server, a Postfix mail server, and MySQL. 
+			Implementation:
+			
+			We have chosen to install an Apache webserver on an Ubuntu machine using a simple apache2 installation.
+			
+			We will be adding a MySQL database to serve as a backend to the webserver. 
+			
+			We will be installing a Postfix mail server. An excellent resource for this installation has been cited
+			in our Resources document.
+			
+			An Apache solution called Cloudstack is currently under consideration for implementation.
+			It is a cloud-based service that is easily scalable. See the resource provided in Resources.
+			
+			Testing:
+			
+			Our previous experience in testing Apache and MySQL has been within Cloudlab. As a result, the testing
+			process has been time-consuming.
+			
+			At the recommendation of our professor, we will test in Docker via a Microsoft Professional
+			Operating System. A free version of Microsoft Professional has been provided to us as university students.
+			
+			The setup of Docker should be simple. A resource has been given in Resources.
 			
 		2
 			In-class demonstration of the selected computing services on local machines or on CloudLab
