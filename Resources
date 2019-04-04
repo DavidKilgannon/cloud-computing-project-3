@@ -11,3 +11,6 @@ https://github.com/djankowski99/SEEDCloud
 
 Possible Apache solution: Cloudstack. Scalable within cloud:
 http://docs.cloudstack.apache.org/en/latest/conceptsandterminology/concepts.html
+
+Docker Setup and Orientation:
+https://docs.docker.com/get-started/
