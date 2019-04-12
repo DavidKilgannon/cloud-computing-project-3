@@ -3,6 +3,15 @@ import geni.rspec.pg as rspec
 
 # Create a Request object to start building the RSpec.
 request = portal.context.makeRequestRSpec()
+
+# Description of System
+tourDescription = \
+"""
+This is our profile for the cloud computing project.
+Our anticipated features are an Apache webserver
+A MySQL database (or something similar)
+A Postfix mail server
+"""
 # Create a XenVM
 node = request.XenVM("node")
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"
