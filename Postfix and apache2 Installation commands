@@ -1,0 +1,65 @@
+//Referenced from https://www.tecmint.com/setup-postfix-mail-server-in-ubuntu-debian/amp/
+
+//Resource suggests checking /var/log/mail.err for error messages.
+
+//the -y flag automatically answers "yes" to all installation questions
+
+//-y flag need
+sudo apt-get update
+sudo apt-get -y install apache2 php5
+sudo apt-get -y install postfix
+
+//this line is potentially needed in configuration. We need to select "Internet Site" from a list of configuration options.
+Internet Site\n
+
+//Enter the name of our Mail Server
+Group 9 Mail Server\n
+
+
+//restart app
+sudo service postfix restart
+
+//postfix, then dovecot, then squirrelmail
+sudo apt-get install dovecot-imapd dovecot-pop3d
+
+//restart devcot...
+sudo service dovecot restart
+
+//squirrelmail
+sudo apt-get install squirrelmail
+
+sudo squirrelmail-configure
+//answer "2" to configuration prompt.
+2\n
+
+//answer 1 to change name
+1\n
+
+//name our domain site (This doesn't have to be a real site)
+group9.com\n
+
+//return to menu, go to General Options
+R\n4\n
+
+//Allow server-side sorting (option 11)
+11\ny\n
+
+//IMPORTANT: the following are sudo commands. We need to figure out how to automate into sudo
+
+//copy the default configuration file to the apache2 directory in order to be able to access the web interface
+sudo cp /etc/squirrelmail/apache.conf /etc/apache2/sites-available/squirrelmail.conf
+sudo a2ensite squirrelmail.conf
+
+//at this point, we can access the mailserver at group9.com/squirrelmail
+//let's add a user...
+
+sudo useradd student
+sudo passwd goldenram
+
+sudo mkdir -p /var/www/html/student
+usermod -m -d /var/www/html/student student
+
+sudo chown -R student:student /var/www/html/student
+
+//we can now login and send emails.
+

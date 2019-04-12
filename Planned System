@@ -1,4 +1,6 @@
 Ubuntu as OS
+//would CentOS7 work better? They're both Linux OS's, and the installation commands I've found (both for docker and mail server)
+//were designed for CentOS7. I think we've done a CentOS7 installation in class as well, so we can find/follow that lecture. - Cameron
 
 Apache Web Server
 MySQL
