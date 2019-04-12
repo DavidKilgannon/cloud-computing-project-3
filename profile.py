@@ -12,6 +12,13 @@ Our anticipated features are an Apache webserver
 A MySQL database (or something similar)
 A Postfix mail server
 """
+#
+# Setup the Tour info with the above description and instructions.
+#  
+tour = IG.Tour()
+tour.Description(IG.Tour.TEXT,tourDescription)
+request.addTour(tour)
+
 # Create a XenVM
 node = request.XenVM("node")
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"
