@@ -2,7 +2,6 @@ set -x
 sudo apt -y update
 
 #setup docker
-apt-install curl
 
 sudo apt-get install \
     apt-transport-https \
