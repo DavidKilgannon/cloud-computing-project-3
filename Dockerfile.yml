@@ -29,3 +29,8 @@ RUN apt-get update\
     mkdir -p /var/www/html/student 
     usermod -m -d /var/www/html/student student 
     chown -R student:student /var/www/html/student
+   
+USER su
+ENV PATH "bin:/usr/bin:$PATH"
+WORKDIR "/home/su"
+CMD["/bin/bash"]
