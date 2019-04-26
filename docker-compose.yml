@@ -3,7 +3,7 @@
 FROM ubuntu:18.04
 
 # Creating apache
-RUN apt-get update\
+RUN apt-get update
     apt-get -y install apache2 php5
     apt -y install mysql-server 
     apt -y install phpmyadmin php-mbstring php-gettext 
