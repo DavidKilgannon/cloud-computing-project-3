@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-
 RUN	apt-get update
 	apt-get -y install postfix
     	Internet Site\n 
@@ -21,5 +20,4 @@ RUN	apt-get update
 	mkdir -p /var/www/html/student 
 	usermod -m -d /var/www/html/student student 
 	chown -R student:student /var/www/html/student
-
 EXPOSE 80
