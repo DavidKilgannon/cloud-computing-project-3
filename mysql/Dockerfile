@@ -1,6 +1,6 @@
-FROM ubuntu: 18.04
+FROM ubuntu:18.04
 
-RUN 	apt-get -y update
+RUN 	apt-get update
 		apt-get -y install mysql-server
 		apt -y install phpmyadmin php-mbstring php-gettext
 		service apache2 restart 
