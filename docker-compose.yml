@@ -7,8 +7,8 @@ services:
         ports:
         - "8001:80"
         
-    mySQL:
-        build: mySQL
+    mysql:
+        build: mysql
         ports:
         - "8002:80"
         
