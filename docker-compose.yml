@@ -2,8 +2,8 @@
 
 
 services:
-    apache:
-        build:apache mysql
+    apache mysql:
+        build: apache mysql
         ports:
         -   "8001:80"
         
