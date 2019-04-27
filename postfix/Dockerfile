@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-RUN	apt-get update
 RUN apt-get -y install postfix
 RUN	Internet Site\n 
 RUN	Group 9 Mail Server\n 
