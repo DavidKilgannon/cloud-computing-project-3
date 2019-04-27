@@ -5,9 +5,9 @@ services:
     apache mysql:
         build: apache mysql
         ports:
-        -   "8001:80"
+        - "8001:80"
         
     postfix:
         build: postfix
         ports:
-        -   "8000:80"
+        - "8000:80"
