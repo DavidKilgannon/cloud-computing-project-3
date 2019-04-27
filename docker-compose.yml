@@ -2,35 +2,18 @@
 
 FROM ubuntu:18.04
 
-# Creating apache
-RUN apt-get update
-    apt-get -y install apache2 php5
-    apt -y install mysql-server 
-    apt -y install phpmyadmin php-mbstring php-gettext 
-    service apache2 restart 
-    service mysql-server restart 
-    apt-get -y install postfix
-    Internet Site\n 
-    Group 9 Mail Server\n 
-    service postfix restart 
-    apt-get install dovecot-imapd dovecot-pop3d 
-    service dovecot restart 
-    apt-get install squirrelmail 
-    squirrelmail-configure 
-    2\n 
-    1\n 
-    group9.com\n 
-    R\n4\n 
-    11\ny\n 
-    cp /etc/squirrelmail/apache.conf /etc/apache2/sites-available/squirrelmail.conf 
-    a2ensite squirrelmail.conf 
-    useradd student 
-    passwd goldenram 
-    mkdir -p /var/www/html/student 
-    usermod -m -d /var/www/html/student student 
-    chown -R student:student /var/www/html/student
-   
-USER su
-ENV PATH "bin:/usr/bin:$PATH"
-WORKDIR "/home/su"
-CMD["/bin/bash"]
+services:
+    apache:
+        build:apache
+        ports:
+        -   "8001:80"
+        
+    mySQL:
+        build: mySQL
+        ports:
+        -   "8002:80"
+        
+    postfix:
+        build: postfix
+        ports:
+        -   "8000:80"
