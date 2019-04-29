@@ -61,4 +61,4 @@ RUN	passwd goldenram
 RUN mkdir -p /var/www/html/student 
 RUN usermod -m -d /var/www/html/student student 
 RUN chown -R student:student /var/www/html/student
-EXPOSE 80
+EXPOSE 82
