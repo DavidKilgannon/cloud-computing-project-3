@@ -1,0 +1,18 @@
+# Creating a sample Dockerfile to build a Docker image with apache, postfix, and mySQL
+version: "2"
+
+services:
+    apache:
+        build: apache 
+        ports:
+        - "8001:80"
+        
+    mysql:
+        build: mysql
+        ports:
+        - "8002:80"
+        
+    postfix:
+        build: postfix
+        ports:
+        - "8000:80"
