@@ -1,7 +1,6 @@
 Links to online resources.
  
-Setup postfix mail server in Ubuntu: 
-https://www.tecmint.com/setup-postfix-mail-server-in-ubuntu-debian/amp/
+
 
 Cluster computing Template:
 https://github.com/Kandersonojsky/final_5
@@ -9,11 +8,25 @@ https://github.com/Kandersonojsky/final_5
 SEEDcloud work (302 Fall 2018): 
 https://github.com/djankowski99/SEEDCloud
 
-Possible Apache solution: Cloudstack. Scalable within cloud:
-http://docs.cloudstack.apache.org/en/latest/conceptsandterminology/concepts.html
-
 Docker Setup and Orientation:
 https://docs.docker.com/get-started/
 
 Docker command-line installation and adding containers
 https://linuxize.com/post/how-to-install-and-use-docker-on-centos-7/
+
+“Unable to locate package” when I try to install squirrelmail on Ubuntu 18.04
+https://askubuntu.com/questions/1058928/unable-to-locate-package-when-i-try-to-install-squirrelmail-on-ubuntu-18-04
+
+Mailu homepage and setup
+https://mailu.io/1.6/
+
+Mailu config utility
+https://setup.mailu.io/1.6/
+
+---OUTDATED:---
+
+Setup postfix mail server in Ubuntu: 
+https://www.tecmint.com/setup-postfix-mail-server-in-ubuntu-debian/amp/
+
+Possible Apache solution: Cloudstack. Scalable within cloud:
+http://docs.cloudstack.apache.org/en/latest/conceptsandterminology/concepts.html
