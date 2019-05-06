@@ -1,0 +1,2 @@
+current_ip=$(wget -qO- http://ipecho.net/plain ; echo)
+sed -i -e 's/OVERWRITETHIS/'$current_ip'/g'
