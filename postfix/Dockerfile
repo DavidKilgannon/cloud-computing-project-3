@@ -6,7 +6,8 @@ RUN sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
 RUN docker-compose -p mailu up -d
 RUN docker-compose -p mailu exec admin flask mailu admin admin group9.com group9rules
 
-
+# NOTE: it works on a web browser!
+# https://[YOUR CLOUD COMPUTERS IP]/
 
 # NOTE: You can open mailu in the shell with 
 # apt install xdg-utils
