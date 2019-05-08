@@ -6,8 +6,14 @@ RUN sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
 RUN docker-compose -p mailu up -d
 RUN docker-compose -p mailu exec admin flask mailu admin admin group9.com group9rules
 
+
+
 # NOTE: You can open mailu in the shell with 
 # apt install xdg-utils
-# xdg-open http://127.0.0.1:8080/ui 
+# xdg-open http://[YOUR IP]/
+
+# The IP address is found in nano docker-compose.yml - scroll to the list of ports. this is your cloud computer's IP address.
+# username: admin
+# password: group9rules
 
 EXPOSE 82
