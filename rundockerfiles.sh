@@ -1,1 +1,1 @@
-test
+sudo docker-compose up
