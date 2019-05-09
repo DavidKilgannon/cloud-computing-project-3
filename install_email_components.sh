@@ -1,4 +1,4 @@
-cd /local/repository/mailu
+cd /local/repository/
 
 # Apache
 
@@ -11,13 +11,13 @@ apt-get update
 apt-get -y install mysql-server
 apt-get -y install php
 
+cd mailu
 # Mailu
-
-sudo current_ip=$(wget -qO- http://ipecho.net/plain ; echo)
-sudo sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
-sudo sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
-sudo docker-compose -p mailu up -d
-sudo docker-compose -p mailu exec admin flask mailu admin admin group9.com group9rules
+cd /local/repository/mailu
+current_ip=$(hostname -i)
+sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
+sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
+sudo docker-compose up
 
 # This should write to the user's console even from inside the shell script.
 
