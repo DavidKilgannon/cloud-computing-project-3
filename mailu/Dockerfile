@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-RUN cd /local/repository/mailu
+RUN cd mailu
 RUN sudo current_ip=$(wget -qO- http://ipecho.net/plain ; echo)
 RUN sudo sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
 RUN sudo sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
