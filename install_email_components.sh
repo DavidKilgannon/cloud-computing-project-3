@@ -17,9 +17,12 @@ cd /local/repository/mailu
 current_ip=$(hostname -i)
 sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
 sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
-sudo docker-compose up
+
 
 # This should write to the user's console even from inside the shell script.
 
 echo "Mail Server is Ready!" | tee welcome.txt
 echo "$current_ip" | tee welcome.txt
+
+cd ..
+sudo docker-compose up
