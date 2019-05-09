@@ -1,10 +1,11 @@
 FROM ubuntu:18.04
 WORKDIR mailu
-RUN sudo current_ip=$(wget -qO- http://ipecho.net/plain ; echo)
-RUN sudo sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
-RUN sudo sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
-RUN sudo docker-compose -p mailu up -d
-RUN sudo docker-compose -p mailu exec admin flask mailu admin admin group9.com group9rules
+RUN apt-get update
+RUN current_ip=$(wget -qO- http://ipecho.net/plain ; echo)
+RUN -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
+RUN sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
+RUN docker-compose -p mailu up -d
+RUN docker-compose -p mailu exec admin flask mailu admin admin group9.com group9rules
 
 # NOTE: it works on a web browser!
 # http://[YOUR CLOUD COMPUTERS IP]/
