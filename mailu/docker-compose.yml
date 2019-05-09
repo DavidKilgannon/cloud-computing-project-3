@@ -21,15 +21,15 @@ services:
     logging:
       driver: json-file
     ports:
-      - "128.104.223.190:80:80"
-      - "128.104.223.190:443:443"
-      - "128.104.223.190:25:25"
-      - "128.104.223.190:465:465"
-      - "128.104.223.190:587:587"
-      - "128.104.223.190:110:110"
-      - "128.104.223.190:995:995"
-      - "128.104.223.190:143:143"
-      - "128.104.223.190:993:993"
+      - "OVERWRITETHIS:80:80"
+      - "OVERWRITETHIS:443:443"
+      - "OVERWRITETHIS:25:25"
+      - "OVERWRITETHIS:465:465"
+      - "OVERWRITETHIS:587:587"
+      - "OVERWRITETHIS:110:110"
+      - "OVERWRITETHIS:995:995"
+      - "OVERWRITETHIS:143:143"
+      - "OVERWRITETHIS:993:993"
     volumes:
       - "/mailu/certs:/certs"
       - "/mailu/overrides/nginx:/overrides"
