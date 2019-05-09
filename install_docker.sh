@@ -12,4 +12,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo apt-get install -y httping
 sudo apt-get install -y jq
 
+cd /local/repository/mailu
+current_ip=$(hostname -i)
+sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
+sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
 sudo su
