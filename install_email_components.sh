@@ -13,7 +13,6 @@ apt-get -y install php
 
 cd mailu
 # Mailu
-cd /local/repository/mailu
 current_ip=$(hostname -i)
 sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
 sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
