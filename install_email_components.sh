@@ -21,6 +21,6 @@ sudo docker-compose -p mailu exec admin flask mailu admin admin group9.com group
 
 # This should write to the user's console even from inside the shell script.
 
-echo "Mail Server is Ready!" | tee welcome.txt
+echo "Mail Server is Ready! Visit http://" | tee welcome.txt
 echo "$current_ip" | tee welcome.txt
-
+echo "/ to log in. First account is username: admin password: group9rules" | tee welcome.txt
