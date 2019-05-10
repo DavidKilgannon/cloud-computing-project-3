@@ -13,15 +13,14 @@ apt-get -y install php
 
 cd mailu
 # Mailu
-current_ip=$(hostname -i)
 sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' docker-compose.yml
 sed -i -e 's/OVERWRITETHIS/'$current_ip'/g' mailu.env
 
+sudo docker-compose -p mailu up -d
+sudo docker-compose -p mailu exec admin flask mailu admin admin group9.com group9rules
 
 # This should write to the user's console even from inside the shell script.
 
 echo "Mail Server is Ready!" | tee welcome.txt
 echo "$current_ip" | tee welcome.txt
 
-cd ..
-sudo docker-compose up
